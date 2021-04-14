@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+      <div class="card">
+        <div class="card-body">
+
+    
+    <h1 class="text-center mt-3">Registrar Usuario</h1> 
+        <form  class="col g3" [formGroup]="crearUsuario" (ngSubmit)="registrarUsuario()" >
+
+            <div class="form-group">
+            <input  class="form-control mt-4 "  type="text" placeholder="Nombre" formControlName="nombre">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="string" placeholder="Correo" formControlName="correo">
+            </div>
+
+            <div class="form-group">
+            <input  class="form-control"  type ="text"placeholder="Identificacion" formControlName="identificacion">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control"  type="text" placeholder="Celular" formControlName="celular">
+            </div> 
+            
+            
+            <div class="form-group">
+            <input class="form-control" type="password" placeholder="Contraseña" formControlName="contrasena">
+            </div>
+
+            <button class="btn btn-primary"
+            [disabled]="crearUsuario.invalid" type="submit">Registrar Usuario</button>
+        </form>
+  
+    </div>
+</div>      
+</div>
+</div>

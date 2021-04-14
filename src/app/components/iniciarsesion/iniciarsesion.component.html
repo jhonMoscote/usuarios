@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+
+            <h1 class="text-center">Iniciar Sesion</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                <input class="form-control mt-4" type="email" placeholder="Correo" formControlName="correo">
+                </div>
+                <div class="form-group">
+                <input class="form-control" type="password" placeholder="Contraseña" formControlName="contrasena">
+                </div>
+    
+                <button class="btn btn-primary  btn-block" type="submit">Iniciar Sesion</button>
+                <hr style="color: aliceblue;">
+                <button class="btn btn-primary  btn-block" routerLink="/registrarusuario">Crear Cuenta Nueva</button>
+              </form>
+        </div>
+    </div>      
+  </div>
+</div>

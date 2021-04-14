@@ -1,0 +1,45 @@
+
+
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col m-6">
+                <h1 class="mt-4 ">Lista de Usuarios</h1>
+            </div>
+            <div class="col m-2">
+               <!-- <button class="btn btn-primary mt-4 btn-lg " routerLink= "/registrarusuario">Registrar Usuario</button>-->
+            </div>
+           
+            
+        </div>
+       
+        <table class="table mt-5">
+           <thead>
+               <tr>
+                   <td>Nombre</td>
+                   <td>correo</td>
+                   <td>Identificacion</td>
+                   <td>Número Telefonico</td>
+                   <td>Contraseña</td>
+                   <td></td>
+               </tr>
+           </thead>
+           <tbody>
+                <tr  *ngFor="let usuario of usuarios">
+                    <td>{{usuario.nombre}} 
+                    <td>{{usuario.correo}}</td>
+                    <td>{{usuario.identificacion}}</td>
+                    <td>{{usuario.celular}}</td>
+                    <td>{{usuario.contrasena}}</td>
+                    <td>
+                        <i class="fas fa-edit fa-lg text-info mr-2" [routerLink]="['/editar-usuario/', usuario.id]"></i>
+                        <i (click)="eliminarUsuario(usuario.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
+                      </td>
+                </tr>
+
+           </tbody>
+     
+    </table>
+    </div>
+
+</div>
